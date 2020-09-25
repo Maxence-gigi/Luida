@@ -1,0 +1,150 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+ 	font-family: allotrope, allotrope-heavy, sans-serif;
+ 	background: #031321;
+ 	color: #fff;
+ 	text-align: center;
+}
+
+section {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: url(img/shutterstock_695731285.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	clip-path: circle(100px at center); 
+}
+
+.container {
+	position: relative;
+	margin-top: 200vh;
+	padding: 100px;
+	background: #031321;
+}
+
+.container h2 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.title {
+	position: relative;
+	top: 350px;
+	z-index: 1;
+	font-size: 3rem;
+	width: 100%;
+}
+
+.builds {
+	width: 100%;
+	height: auto;
+	display: block;
+	padding-bottom: 100px;
+}
+
+.builds h2 {
+	font-size: 40px;
+	padding: 100px 0px 50px 0px;
+}
+
+.builders {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: 40px;
+	background: #060c21;
+	transition: 0.5s;
+}
+
+.box:hover {
+	height: 350px;
+}
+
+.box .imgBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.box .imgBox img {
+	max-width: 100%;
+	opacity: 0.1;
+	transition: 0.5s;
+	margin: 0 auto;
+}
+
+.box:hover .imgBox img {
+	opacity: 1;
+}
+
+.box:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -1;
+}
+
+.box:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -2;
+	filter: blur(40px);
+}
+
+.box .content {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.box:hover .content {
+	opacity: 1;
+}
+
+.box .content h2 {
+	font-size: 24px;
+	color: #fff;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.box .content h2 span{
+	font-size: 20px;
+	color: #fff;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-align: center;
+}
